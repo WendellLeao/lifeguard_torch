@@ -1,6 +1,6 @@
 {
-    "name": "LifeguardTorch.Game",
-    "rootNamespace": "LifeguardTorch.Game",
+    "name": "LifeguardTorch.Gameplay",
+    "rootNamespace": "LifeguardTorch.Gameplay",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

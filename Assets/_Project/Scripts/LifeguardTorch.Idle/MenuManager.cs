@@ -8,21 +8,15 @@ namespace LifeguardTorch.Idle
     {
         [SerializeField] private Button _playButton;
         
-        public void Setup()
+        private void Awake()
         {
             _playButton.onClick.AddListener(PlayGame);
         }
 
-        public void Dispose()
+        private void OnDisable()
         {
             _playButton.onClick.RemoveListener(PlayGame);
         }
-
-        public void Tick(float deltaTime)
-        { }
-		
-        public void FixedTick(float fixedDeltaTime)
-        { }
 
         private void PlayGame()
         {

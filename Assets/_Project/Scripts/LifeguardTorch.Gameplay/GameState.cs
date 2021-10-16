@@ -1,4 +1,4 @@
-namespace LifeguardTorch.Game
+namespace LifeguardTorch.Gameplay
 {
     public enum GameState
     {

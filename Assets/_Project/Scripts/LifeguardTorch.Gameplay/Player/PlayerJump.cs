@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace LifeguardTorch.Game.Player
+namespace LifeguardTorch.Gameplay.Player
 {
     public sealed class PlayerJump : Player
     {
@@ -12,16 +12,16 @@ namespace LifeguardTorch.Game.Player
         
         private bool _isJumping = false;
         
-        public override void Tick(float deltaTime)
+        protected override void Update()
         {
-            base.Tick(deltaTime);
+            base.Update();
 
             _isJumping = Input.GetKeyDown(KeyCode.Space);
         }
 
-        public override void FixedTick(float fixedDeltaTime)
+        protected override void FixedUpdate()
         {
-            base.FixedTick(fixedDeltaTime);
+            base.FixedUpdate();
 
             HandleJump();
         }

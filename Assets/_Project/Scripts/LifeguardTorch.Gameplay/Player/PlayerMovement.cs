@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace LifeguardTorch.Game.Player
+namespace LifeguardTorch.Gameplay.Player
 {
     public sealed class PlayerMovement : Player
     {
@@ -8,20 +8,20 @@ namespace LifeguardTorch.Game.Player
 
         private float _horizontalMovement;
         
-        public override void Tick(float deltaTime)
+        protected override void Update()
         {
-            base.Tick(deltaTime);
-            
+            base.Update();
+
             SetHorizontalMovement(Input.GetAxis("Horizontal"));
         }
-        
-        public override void FixedTick(float deltaTime)
+
+        protected override void FixedUpdate()
         {
-            base.FixedTick(deltaTime);
-            
+            base.FixedUpdate();
+
             HandleMovement();
         }
-
+        
         private void HandleMovement()
         {
             GetRigidbody.velocity = new Vector2(_horizontalMovement * _moveSpeed, GetRigidbody.velocity.y);
